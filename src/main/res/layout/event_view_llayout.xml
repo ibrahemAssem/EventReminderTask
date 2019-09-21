@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F0F0EC"
+    android:orientation="vertical"
+    android:id="@+id/calendarLayout"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/card_style"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:id="@+id/CardView">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fff"
+
+                android:paddingTop="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/eventTitle"
+                    android:textColor="@color/darkgray"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textStyle="italic"
+                    android:text="Title"
+                    android:textSize="20sp"
+                    android:hint="Title" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_field_style"
+                    android:drawableLeft="@drawable/calendar"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/eventDes"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Description" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_field_style"
+                    android:drawableLeft="@drawable/calendar"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/eventLocation"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Location" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_field_style"
+                    android:drawableLeft="@drawable/calendar"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/eventAttendee"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Attendee" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_field_style"
+                    android:drawableLeft="@drawable/calendar"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/eventStart"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/darkgray"
+                    android:hint="StartDate" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eventEnd"
+                    android:textColor="@color/darkgray"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/calendar"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/text_field_style"
+                    android:hint="EndDate"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/ViewEventDetailsBtnID"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="11dp"
+
+                    android:src="@drawable/eye"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+
+                    android:layout_alignParentLeft="true"/>
+
+                    <ImageView
+                        android:id="@+id/RemoveEvent"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="end"
+                        android:layout_marginTop="11dp"
+                        android:elevation="15dp"
+                        android:src="@drawable/trash"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+
+
+                        <ImageView
+                            android:id="@+id/AcceptEventBtn"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="11dp"
+                            android:src="@drawable/checkmark"
+                            app:layout_constraintEnd_toStartOf="@+id/RemoveEvent"
+                            app:layout_constraintStart_toEndOf="@+id/ViewEventDetailsBtnID"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginLeft="100dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            />
+
+                    <ImageView
+                        android:id="@+id/RejectEventBtn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="11dp"
+
+                        android:layout_marginRight="100dp"
+                        android:src="@drawable/unchecked"
+                        app:layout_constraintEnd_toStartOf="@+id/RemoveEvent"
+                        app:layout_constraintStart_toEndOf="@+id/ViewEventDetailsBtnID"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

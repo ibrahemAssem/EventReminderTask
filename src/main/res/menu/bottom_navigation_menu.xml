@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Events"
+        android:id="@+id/bottomNavigationEventsMenuId"
+        android:icon="@drawable/calendar"/>
+
+    <item android:title="Add Event"
+        android:id="@+id/bottomNavigationAddEventMenuId"
+        android:icon="@drawable/calendar_add_event"/>
+
+    <item android:title="Profile"
+        android:id="@+id/bottomNavigationProfileMenuId"
+        android:icon="@drawable/user"/>
+
+</menu>

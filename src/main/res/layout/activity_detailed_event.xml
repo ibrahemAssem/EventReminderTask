@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F0F0EC"
+    android:orientation="vertical"
+
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/containerRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/card_style"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:padding="20dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:id="@+id/CardView">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fff"
+
+                android:paddingTop="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/detailedEventTitle"
+                    android:textColor="@color/darkgray"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textStyle="italic"
+                    android:text="Title"
+                    android:textSize="20sp"
+                    android:hint="Title" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_field_style"
+                    android:drawableLeft="@drawable/calendar"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/detailedEventDes"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Description" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_field_style"
+                    android:drawableLeft="@drawable/calendar"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/detailedEventLocation"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Location" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_field_style"
+                    android:drawableLeft="@drawable/calendar"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/detailedEventAttendee"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Attendee" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_field_style"
+                    android:drawableLeft="@drawable/calendar"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/detailedEventStart"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/darkgray"
+                    android:hint="StartDate" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detailedEventEnd"
+                    android:textColor="@color/darkgray"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/calendar"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/text_field_style"
+                    android:hint="EndDate"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/humidity"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="11dp"
+                        android:src="@drawable/humidity"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/humidityTextView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/humidity"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="30sp"
+                        android:text="15"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/temprature"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="end"
+                        android:layout_marginTop="11dp"
+                        android:src="@drawable/thermometer"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/tempratureTextView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:textSize="30sp"
+                        android:text="15"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/temprature"
+                        app:layout_constraintRight_toLeftOf="parent"
+
+                        />
+                    <ImageView
+                        android:id="@+id/weatherIcon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:gravity="end"
+                        android:layout_marginTop="11dp"
+                        app:layout_constraintEnd_toStartOf="@id/temprature"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/humidity"
+                        />
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
